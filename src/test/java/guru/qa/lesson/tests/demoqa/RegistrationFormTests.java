@@ -1,7 +1,5 @@
-package guru.qa.lesson.demoqa;
+package guru.qa.lesson.tests.demoqa;
 
-import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
@@ -12,14 +10,8 @@ import static com.codeborne.selenide.Selenide.executeJavaScript;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
-@Tag("demoQA")
-public class RegistrationFormTests {
-
-    @BeforeAll
-    public static void setUp() {
-        Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browserSize = "1980x1080";
-    }
+@Tag("demoqa")
+public class RegistrationFormTests extends TestBase {
 
     @Test
     public void fieldFormTest() {
