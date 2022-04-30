@@ -1,5 +1,7 @@
 package guru.qa.lesson.tests.demoqa;
 
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
@@ -14,6 +16,7 @@ import static io.qameta.allure.Allure.step;
 public class RegistrationFormTests extends TestBase {
 
     @Test
+    @DisplayName("Successful fill registration test")
     public void fieldFormTest() {
         step("Open registration form", () -> {
             open("/automation-practice-form");
